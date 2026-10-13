@@ -32,6 +32,12 @@ jobs:
               newman run 'Inwarranty-flow Collection 1.postman_collection.json' \
               -e QA.postman_environment.json \
               -r cli,htmlextra
+
+      - name: Newman Report
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: Newman Report
+          path: newman/*.html
       
         
 
